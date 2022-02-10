@@ -13,7 +13,7 @@ contract SimpleWallet is allowance {
         }   
     }
     function renounceOwnership() public override onlyOwner() {
-        revert("You can't do this!");
+        revert("You can't renounce your ownership!");
     }
     fallback () external payable {
         emit MoneyRecieved(msg.sender, msg.value);
